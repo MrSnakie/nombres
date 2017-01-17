@@ -1,3 +1,88 @@
 /* ----------------------------- */
 /*       FEUILLE DE STYLE        */
 /* ----------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body {
+	background: url(https://www.splitshire.com/wp-content/uploads/2014/09/SplitShire_Blur_Background_XVI-1800x1200.jpg);
+	background-size: cover;
+	font-family: Roboto, sans-serif;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+section {
+	background-color: #000000;
+	opacity: 0.3;
+	box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.45);
+	border-radius: 4px;
+	width: 750px;
+	height: auto;
+	margin: auto;
+	padding: 15px 15px 15px 15px;
+}
+
+h1 {
+	background-color: #FFFFFF;
+	color: #000000;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 0px;
+	font-size: 28px;
+	text-align: center;
+}
+
+ul#liste {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+	margin: 0px;
+	list-style: none;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+li {
+	background-color: transparent;
+	border: 2px solid #CBCBCB;
+	color: #FFFFFF;
+	font-weight: 500;
+	border-radius: 50px;
+	width: 38px;
+	height: 38px;
+	margin: 5px 5px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	transition: 300ms ease;
+}
+
+li:hover {
+	background-color: #6AA0FF;
+	color: #000000;
+	animation-name: tada;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+li:hover:nth-child(2n+2) {
+	background-color: #FF6A6D;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes tada {
+	0% {transform: scale3d(1, 1, 1);}
+	10%, 20% {transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);}
+	30%, 50%, 70%, 90% {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);}
+	40%, 60%, 80% {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);}
+	100% {transform: scale3d(1, 1, 1);}
+}
